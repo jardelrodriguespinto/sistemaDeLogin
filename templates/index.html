@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hey user</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        
+        <div class="wrapper">
+            {% if user.is_authenticated %}
+                <h1>Welcome to this page, {{name}}</h1>
+                <h2>You have successfully logged in</h2>
+                <div class="container">
+                    <button type="submit"><a href="{% url 'signout' %}">Sign Out</a></button>
+                </div>
+            {% else %}
+                <h1>Welcome to this page, random user</h1>
+            {% endif %}
+            <div class="container">
+                <button type="submit"><a href="{% url 'login' %}">Login</a></button>
+                <button type="submit"><a href="{% url 'register' %}">Register</a></button>
+            </div>
+        </div>    
+    </body>
+</html>

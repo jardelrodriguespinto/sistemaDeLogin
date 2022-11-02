@@ -1,0 +1,38 @@
+body{
+    background-color: #74cfbf;
+
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    align-self: center;
+    color:red;
+}
+h2{
+    align-self: center;
+    color:red;
+}
+.container{
+    display: flex;
+    margin-top: 15%;
+    align-self: center;
+    flex-direction: row;
+    
+}
+button{
+    background-color:gold ;
+    border: none;
+    border-radius: 15px;
+    width: 20vw;
+    height: 7vh;
+    cursor: pointer;
+    margin-left: 3%;
+    font-size: 1.5em;
+}
+
+button a{
+    text-decoration: none;
+    color:black;
+}
